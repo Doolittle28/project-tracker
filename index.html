@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-fluid bg-dark m-0">
-        <div class="col-12 text-light p-4" id="header">Project Tracker</div>
+        <h1 class="col-12 text-light p-4" id="header">Project Tracker</h1>
         <div class="col-12 text-light p-4">Current Date and Time
             <p id="time"></p>
         </div>
@@ -21,21 +21,71 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="card custom-card">
-                <h3 class="card-header">
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card custom-card">
+                    <h3 class="card-header">Add a project</h3>
                     <div class="card-body">
+                        <ul class="list-group card-details">
+                            <li class="list-group-item">Project Name</li>
+                            <li class="list-group-item">Start Date</li>
+                            <li class="list-group-item">Due Date</li>
+                        </ul>
                         <div>
                             <button type="button" class="btn btn-primary" id="add-project">Add Project</button>
                         </div>
                     </div>
-                </h3>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col" class="p-3"></th>
+                    </tr>
+                </thead>
+                <tbody id="projects"></tbody>
+            </table>
+        </div>
+    </div>
 
+    <div class="modal fade" id="project-modal" tabindex="-1" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project-modal-forms">Add Project</h5>
+                <button type="button" class="close" data-dismiss="modal"></button:b>
+            </div>
 
+            <form id="modal-form">
 
+                <div class="modal-forms">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" placeholder="Project Name" required />
+                </div>
+
+                <div class="modal-forms">
+                    <label for="start-date">Start Date</label>
+                    <input type="text" id="start-date" required>
+                </div>
+
+                <div class="modal-forms">
+                    <label for="due-date">Due Date</label>
+                    <input type="text" id="due-date" required>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 
