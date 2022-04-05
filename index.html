@@ -8,14 +8,29 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
-    <title>Document</title>
+    <title>Project Tracker</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="col-12" id="header">Project Tracker</div>
-        <div class="col-12" id="time">Current Date and Time</div>
+    <div class="container-fluid bg-dark m-0">
+        <div class="col-12 text-light p-4" id="header">Project Tracker</div>
+        <div class="col-12 text-light p-4">Current Date and Time
+            <p id="time"></p>
+        </div>
 
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card custom-card">
+                <h3 class="card-header">
+                    <div class="card-body">
+                        <div>
+                            <button type="button" class="btn btn-primary" id="add-project">Add Project</button>
+                        </div>
+                    </div>
+                </h3>
+            </div>
+        </div>
     </div>
 
 
@@ -25,11 +40,11 @@
 
 
 
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
         integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
